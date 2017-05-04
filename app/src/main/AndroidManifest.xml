@@ -21,16 +21,21 @@
             </intent-filter>
         </activity>
 
-        <!-- AudioLibraryActivity-->
+        <!-- AudioLibraryActivity -->
         <activity
             android:name=".AudioLibraryActivity"
-            android:label="@string/string_activity_audio_library_name">
-        </activity>
+            android:label="@string/string_activity_audio_library_name"></activity>
 
         <!-- SettingsActivity -->
-        <activity android:name=".SettingsActivity"
-            android:label="@string/string_activity_settings_name">
-        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/string_activity_settings_name"></activity>
+
+        <!-- SessionsActivity -->
+        <activity
+            android:name=".SessionsActivity"
+            android:label="@string/string_activity_sessions_name"></activity>
+        <activity android:name=".NewSessionActivity"></activity>
     </application>
 
 </manifest>

@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Find Audio library button.
+        // Find Audio library button
         Button buttonAudioLibrary = (Button) findViewById(R.id.buttonAudioLibrary);
 
         // Set click listener on that view
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         // Find Settings button.
         Button buttonSettings = (Button) findViewById(R.id.buttonSettings);
 
-        // Set click listener on buttonSettings.
+        // Set click listener on buttonSettings
         buttonSettings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -38,6 +38,20 @@ public class MainActivity extends AppCompatActivity {
                 Intent intentSettings = new Intent(MainActivity.this, SettingsActivity.class);
                 // Start activity
                 startActivity(intentSettings);
+            }
+        });
+
+        // Find Choose meditation button
+        Button buttonMeditationSessions = (Button) findViewById(R.id.buttonMeditationSessions);
+
+        // Set click listener on that view
+        buttonMeditationSessions.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                // Create intent to open {@link SessionsActivity}
+                Intent intentSessions = new Intent(MainActivity.this, SessionsActivity.class);
+                // Start activity
+                startActivity(intentSessions);
             }
         });
     }

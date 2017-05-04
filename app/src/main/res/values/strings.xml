@@ -11,8 +11,8 @@
         \nHub for reaching main functions of the app.
         \n * AUDIO LIBRARY: managing audio.
         \n * SETTINGS.
-        \n * CHOOSE MEDITATION: access, edit meditation sessions.
-        \n * PLAY, PAUSE, STOP button.
+        \n * CHOOSE MEDITATION: access, edit, create meditation sessions.
+        \n * PLAY, PAUSE, STOP the active meditation session..
         \n * TOGGLE BUTTON: turns the audio on or off.
         \n\n<b>Implementation</b>
         \n * for playing audio: MediaPlayer class (MediaController, MediaSession)
@@ -21,6 +21,7 @@
     <string name="string_settings">Settings</string>
     <string name="string_library">Audio Library</string>
     <string name="string_meditation_profiles">Choose Meditation</string>
+    <string name="string_active_session">Active session</string>
     <string name="string_audio_on">Audio On</string>
     <string name="string_audio_off">Audio Off</string>
 
@@ -56,6 +57,21 @@
         \n\n<b>Implementation</b>
         \n * for UI: Preference and PreferenceActivity class
         \n * for storing preference data: SharedPreferences interface</string>
+
+    <!-- activity_sessions strings -->
+    <string name="string_activity_sessions_name">Sessions</string>
+    <string name="string_builtIn_session_zazen">Zazen</string>
+    <string name="string_builtIn_session_positivity">Positive self-hypnosis</string>
+    <string name="string_new">New session</string>
+    <string name="string_activity_sessions_description"><b>Manage meditation sessions</b>
+        \nThe user can manage meditation sessions, edit, delete them (long click) or create new ones
+        (NEW SESSION button).
+        A meditation session consists of editable segments (add, delete, change order of segments) 
+        which have a duration and optional audio linked to them.
+        \n\n<b>Implementation</b>
+        \nA session should be some kind of play list, where a meditation segment is an item of the
+        playlist. Sessions must be stored somehow, when selected should be grabbed
+        from the database, set and displayed as the active session in the MainActivity / Home screen.</string>
 
 
 </resources>
