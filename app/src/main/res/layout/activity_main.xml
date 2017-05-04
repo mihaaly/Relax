@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/dimen_layout_margin"
+    tools:context="com.example.android.relax.MainActivity">
+
+    <!-- Points to AudioLibraryActivity. -->
+    <Button
+        android:id="@+id/buttonAudioLibrary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/string_library"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/buttonSettings"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Points to .... -->
+    <Button
+        android:id="@+id/buttonSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/string_settings"
+        app:layout_constraintLeft_toRightOf="@+id/buttonAudioLibrary"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Points to .... -->
+    <Button
+        android:id="@+id/buttonMeditationProfiles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/string_meditation_profiles"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAudioLibrary" />
+
+    <!-- Description of the activity. -->
+    <ScrollView
+        android:id="@+id/scrollViewActivityMain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonPause"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMeditationProfiles"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewActivityMainDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/string_activity_main_description"
+                android:textColor="@color/colorIconsText"
+                app:layout_constraintBottom_toTopOf="@+id/imageButtonPause"
+                tools:layout_editor_absoluteX="8dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Starts the meditation session. -->
+    <ImageButton
+        android:id="@+id/imageButtonPlay"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:srcCompat="@drawable/ic_play" />
+
+    <!-- Pauses the meditation session. -->
+    <ImageButton
+        android:id="@+id/imageButtonPause"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/imageButtonPlay"
+        app:srcCompat="@drawable/ic_pause" />
+
+    <!-- Stops meditation session. -->
+    <ImageButton
+        android:id="@+id/imageButtonStop"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/imageButtonPause"
+        app:srcCompat="@drawable/ic_stop" />
+
+    <!-- Turns audio on or off. -->
+    <ToggleButton
+        android:id="@+id/toggleButtonVolume"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="0dp"
+        android:textOff="@string/string_audio_off"
+        android:textOn="@string/string_audio_on"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toRightOf="@+id/imageButtonStop"
+        app:layout_constraintRight_toRightOf="parent" />
+</android.support.constraint.ConstraintLayout>

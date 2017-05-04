@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">Relax</string>
+
+    <!-- activity_main strings -->
+    <string name="string_activity_main_name">Start session</string>
+    <string name="string_activity_main_description">The app allows the use of some built-in
+        meditation sessions or create custom ones. A meditation session consists of editable segments
+        (add, delete, change order of segments) which have a duration and optional audio linked to them.
+        \nBasically it is a meditation timer.
+        \n\n<b>Main Screen / Home Screen</b>
+        \nHub for reaching main functions of the app.
+        \n * AUDIO LIBRARY: managing audio.
+        \n * SETTINGS.
+        \n * CHOOSE MEDITATION: access, edit meditation sessions.
+        \n * PLAY, PAUSE, STOP button.
+        \n * TOGGLE BUTTON: turns the audio on or off.
+        \n\n<b>Implementation</b>
+        \n * for playing audio: MediaPlayer class (MediaController, MediaSession)
+        \n * for managing audio sources and output: AudioManager class
+        \n * for built-in sounds: SoundPool class</string>
+    <string name="string_settings">Settings</string>
+    <string name="string_library">Audio Library</string>
+    <string name="string_meditation_profiles">Choose Meditation</string>
+    <string name="string_audio_on">Audio On</string>
+    <string name="string_audio_off">Audio Off</string>
+
+    <!-- activity_audio_library strings -->
+    <string name="string_activity_audio_library_name">Audio library</string>
+    <string name="string_Import">Import</string>
+    <string name="string_Buy">Buy</string>
+    <string name="string_Home">Home</string>
+    <string name="string_activity_audio_library_description"><b>Manage audio library</b>
+        \nThe user can manage / browse media files:
+        \n * browse built-in textual, instrumental audio files, and bell sounds
+        \n * BUY button: buy new content, ambient sounds, guided meditations etc.
+        \n * IMPORT button: import media files (watch folders on the device)
+        \n * HOME button: go back to main screen
+        \n\n<b>Implementation</b>
+        \n * for browsing media: MediaBrowser and MediaBrowserServiceCompat class
+        \n * for importing media: FileObserver class?
+        \n * for accessing files on external storage: StorageManager, StorageVolume class
+        \n * for accessing metadata: MediaStore class
+        \n * for data storage: ContentProvider class
+        \n * for selling content: In-app Billing API</string>
+
+    <!-- activity_settings strings-->
+    <string name="string_activity_settings_name">Settings</string>
+    <string name="string_activity_settings_description"><b>Settings</b>
+        \nApp settings, like:
+        \n * volume
+        \n * mute notifications and / or incoming calls
+        \n * keep screen on
+        \n * switch theme
+        \n * About section
+        \n * Rate us section
+        \n\n<b>Implementation</b>
+        \n * for UI: Preference and PreferenceActivity class
+        \n * for storing preference data: SharedPreferences interface</string>
+
+
+</resources>

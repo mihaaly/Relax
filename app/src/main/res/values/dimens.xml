@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dimen_touch_target">56dp</dimen>
+    <dimen name="dimen_layout_margin">16dp</dimen>
+
+</resources>
