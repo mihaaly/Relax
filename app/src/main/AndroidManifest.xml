@@ -35,7 +35,16 @@
         <activity
             android:name=".SessionsActivity"
             android:label="@string/string_activity_sessions_name"></activity>
-        <activity android:name=".NewSessionActivity"></activity>
+
+        <!-- NewSessionActivity -->
+        <activity
+            android:name=".NewSessionActivity"
+            android:label="@string/string_activity_new_session_name">
+        </activity>
+
+        <!-- NewSegmentActivity -->
+        <activity android:name=".NewSegmentActivity"
+            android:label="@string/string_activity_new_segment_name"></activity>
     </application>
 
 </manifest>

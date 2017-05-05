@@ -3,24 +3,24 @@
 
     <!-- activity_main strings -->
     <string name="string_activity_main_name">Start session</string>
+    <string name="string_settings">Settings</string>
+    <string name="string_library">Audio Library</string>
+    <string name="string_meditation_profiles">Choose Meditation</string>
     <string name="string_activity_main_description">The app allows the use of some built-in
         meditation sessions or create custom ones. A meditation session consists of editable segments
         (add, delete, change order of segments) which have a duration and optional audio linked to them.
         \nBasically it is a meditation timer.
         \n\n<b>Main Screen / Home Screen</b>
         \nHub for reaching main functions of the app.
-        \n * AUDIO LIBRARY: managing audio.
-        \n * SETTINGS.
-        \n * CHOOSE MEDITATION: access, edit, create meditation sessions.
-        \n * PLAY, PAUSE, STOP the active meditation session..
-        \n * TOGGLE BUTTON: turns the audio on or off.
+        \n * AUDIO LIBRARY: managing audio
+        \n * SETTINGS
+        \n * CHOOSE MEDITATION: access, edit, create meditation sessions
+        \n * PLAY, PAUSE, STOP the active meditation session
+        \n * TOGGLE BUTTON: turns the audio on or off
         \n\n<b>Implementation</b>
         \n * for playing audio: MediaPlayer class (MediaController, MediaSession)
         \n * for managing audio sources and output: AudioManager class
         \n * for built-in sounds: SoundPool class</string>
-    <string name="string_settings">Settings</string>
-    <string name="string_library">Audio Library</string>
-    <string name="string_meditation_profiles">Choose Meditation</string>
     <string name="string_active_session">Active session</string>
     <string name="string_audio_on">Audio On</string>
     <string name="string_audio_off">Audio Off</string>
@@ -29,7 +29,6 @@
     <string name="string_activity_audio_library_name">Audio library</string>
     <string name="string_Import">Import</string>
     <string name="string_Buy">Buy</string>
-    <string name="string_Home">Home</string>
     <string name="string_activity_audio_library_description"><b>Manage audio library</b>
         \nThe user can manage / browse media files:
         \n * browse built-in textual, instrumental audio files, and bell sounds
@@ -43,12 +42,14 @@
         \n * for accessing metadata: MediaStore class
         \n * for data storage: ContentProvider class
         \n * for selling content: In-app Billing API</string>
+    <string name="string_Home">Home</string>
 
     <!-- activity_settings strings-->
     <string name="string_activity_settings_name">Settings</string>
     <string name="string_activity_settings_description"><b>Settings</b>
         \nApp settings, like:
         \n * volume
+        \n * vibration
         \n * mute notifications and / or incoming calls
         \n * keep screen on
         \n * switch theme
@@ -62,16 +63,40 @@
     <string name="string_activity_sessions_name">Sessions</string>
     <string name="string_builtIn_session_zazen">Zazen</string>
     <string name="string_builtIn_session_positivity">Positive self-hypnosis</string>
-    <string name="string_new">New session</string>
     <string name="string_activity_sessions_description"><b>Manage meditation sessions</b>
         \nThe user can manage meditation sessions, edit, delete them (long click) or create new ones
         (NEW SESSION button).
-        A meditation session consists of editable segments (add, delete, change order of segments) 
+        A meditation session consists of editable segments (add, delete, change order of segments)
         which have a duration and optional audio linked to them.
         \n\n<b>Implementation</b>
         \nA session should be some kind of play list, where a meditation segment is an item of the
         playlist. Sessions must be stored somehow, when selected should be grabbed
         from the database, set and displayed as the active session in the MainActivity / Home screen.</string>
+    <string name="string_new">"New session..."</string>
 
+    <!-- activity_new_session strings -->
+    <string name="string_activity_new_session_name">Edit session</string>
+    <string name="string_hint_session_name">Name</string>
+    <string name="string_hint_session_description">Description</string>
+    <string name="string_activity_new_session_description"><b>Edit session and its segments</b>
+        \nIn this activity the user edits the name and description of an existing or new session, adds new
+        segments (NEW SEGMENT button, opens new activity), deletes, reorders them (long click).
+        \n\n<b>Implementation</b>
+        \n * creation of new segments creates new UI elements
+        \n * deletion of a segment destroys UI elements
+        \n * SAVE button saves the session, its segments and parameters to an internal database
+    </string>
+    <string name="string_new_segment">"New segment..."</string>
+    <string name="string_save">Save</string>
+    <string name="string_cancel">Cancel</string>
 
+    <!-- activity_new_segment strings -->
+    <string name="string_activity_new_segment_name">Edit segment</string>
+    <string name="string_hint_segment_name">Name of segment</string>
+    <string name="string_activity_new_segment_description"><b>Edit segment and its properties</b>
+        \nIn this activity user gives a name to the segment, assigns optional audio (from the library),
+        adjusts volume, sets duration (fixed, endless (loop), as long as the assigned audio etc.).
+        \n\n<b>Implementation</b>
+        \n * creating playlist: MediaStore.Audio.Playlists final class?
+        \n * for timer: TimerTask abstract class and / or CountDownTimer class?</string>
 </resources>
