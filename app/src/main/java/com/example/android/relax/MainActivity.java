@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Create a new intent to open {@link AudioLibraryActivity}
-                Intent intentAudioLibrary = new Intent (MainActivity.this, AudioLibraryActivity.class);
+                Intent intentAudioLibrary = new Intent(MainActivity.this, AudioLibraryActivity.class);
                 // Start new activity
                 startActivity(intentAudioLibrary);
             }
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         Button buttonMeditationSessions = (Button) findViewById(R.id.buttonMeditationSessions);
 
         // Set click listener on that view
-        buttonMeditationSessions.setOnClickListener(new View.OnClickListener(){
+        buttonMeditationSessions.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Create intent to open {@link SessionsActivity}
@@ -55,5 +55,4 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
 }

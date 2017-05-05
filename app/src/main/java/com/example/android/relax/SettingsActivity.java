@@ -21,7 +21,7 @@ public class SettingsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // New intent to open {@link MainActivity}
-                Intent intentMainActivity = new Intent (SettingsActivity.this, MainActivity.class);
+                Intent intentMainActivity = new Intent(SettingsActivity.this, MainActivity.class);
 
                 // Start activity
                 startActivity(intentMainActivity);

@@ -21,7 +21,7 @@ public class SessionsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // New intent to open {@link NewSessionActivity}
-                Intent intentNewSession = new Intent (SessionsActivity.this, NewSessionActivity.class);
+                Intent intentNewSession = new Intent(SessionsActivity.this, NewSessionActivity.class);
                 // Start activity
                 startActivity(intentNewSession);
             }
